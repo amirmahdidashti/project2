@@ -65,10 +65,10 @@
                 myli = document.createElement('li');
                 myli.className = 'nav-item';
                 if (element.link == $(location).attr('href')) { 
-                    myli.classList.add('active');
+                    mya.classList.add('active');
                 }
-                if (element.disabled) {
-                    myli.classList.add('disabled');
+                if (element.disabled == true) {
+                    mya.classList.add('disabled');
                 }
                 mya = document.createElement('a');
                 mya.className = 'nav-link';
