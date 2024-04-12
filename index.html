@@ -42,13 +42,13 @@
 
 
     <script>
-        var requestURL = 'https://amirmahdidashti.github.io/project2/menu.json';
-        var request = new XMLHttpRequest();
-        request.open('GET', requestURL);
-        request.responseType = 'json';
-        request.send();
-        request.onload = function () {
-            var menu = request.response;
+        var menuURL = 'https://amirmahdidashti.github.io/project2/menu.json';
+        var menurequest = new XMLHttpRequest();
+        menurequest.open('GET', menuURL);
+        menurequest.responseType = 'json';
+        menurequest.send();
+        menurequest.onload = function () {
+            var menu = menurequest.response;
             var items = menu['items'];
             for (let i = 0; i < items.length; i++) {
                 const element = items[i];
