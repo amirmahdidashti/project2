@@ -7,7 +7,7 @@
         {
             "title": "بزودی",
             "link": "",
-            "disabled":true
+            "disabled":"true"
         }
     ]
 }
