@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'Vazirmatn';
+    src: url('Vazirmatn[wght].woff2') format('woff2 supports variations'),
+        url('Vazirmatn[wght].woff2') format('woff2-variations');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+* {
+    font-family: Vazirmatn;
+}
+
+.np {
+    font-feature-settings: "ss01";
+}
