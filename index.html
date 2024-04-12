@@ -64,14 +64,15 @@
                 const element = items[i];
                 myli = document.createElement('li');
                 myli.className = 'nav-item';
-                if (element.link == $(location).attr('href')) { 
+                mya = document.createElement('a');
+                mya.className = 'nav-link';
+                if (element.link == window.location.href) { 
                     mya.classList.add('active');
                 }
                 if (element.disabled == "true") {
                     mya.classList.add('disabled');
                 }
-                mya = document.createElement('a');
-                mya.className = 'nav-link';
+                
 
                 mya.href = element.link;
                 mya.innerHTML = element.title;
