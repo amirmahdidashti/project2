@@ -2,11 +2,12 @@
     "items": [
         {
             "title": "خانه",
-            "link": "/project2/"
+            "link": "https://amirmahdidashti.github.io/project2/"
         },
         {
             "title": "بزودی",
-            "link": ""
+            "link": "",
+            "disabled":true
         }
     ]
 }
