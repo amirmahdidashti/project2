@@ -29,13 +29,13 @@
             <img src="https://taaghche.com/images/firstpagebanner/underbanner/FreeBooks.webp" style="width:40px;">
         </a>
         <div class="collapse navbar-collapse" id="collapsibleNavbar">
-            <ul class="navbar-nav text-right">
-                <li class="nav-item">
-                    <a class="nav-link active " href="">
+            <ul id="menulinks" class="navbar-nav text-right">
+                <li  class="nav-item">
+                    <a  class="nav-link active " href="">
                         خانه
                     </a>
                 </li>
-                
+
                 <li class="nav-item ">
                     <a class="nav-link disabled " href="">
                         به زودی
@@ -48,11 +48,32 @@
     <div class="text-center mt-3">
         <p id="test"></p>
     </div>
-    
+
 
 
     <script>
+        var requestURL = 'https://amirmahdidashti.github.io/project2/menu.json';
+        var request = new XMLHttpRequest();
+        request.open('GET', requestURL);
+        request.responseType = 'json';
+        request.send();
+        request.onload = function () {
+            var menu = request.response;
+            var items = menu['items'];
+            for (let i = 0; i < items.length; i++) {
+                const element = items[i];
+                myli = document.createElement('li');
+                myli.className = 'nav-item';
+                mya = document.createElement('a');
+                mya.className = 'nav-link';
 
+                mya.href = element.link;
+                mya.innerHTML = element.title;
+
+                myli.appendChild(mya);
+                $("#menulinks").appendChild(myli);
+            }
+        }
         mytext = "سلام خوش آمدید";
         i = 0;
         intro = setInterval(() => {
@@ -63,8 +84,6 @@
                 clearInterval(intro);
             }
         }, 100);
-
-
 
         function copyText(text) {
 
@@ -106,7 +125,7 @@
                     <a href="tamrin/tamrin2.html">لینک</a>
                 </td>
             </tr>
-           
+
         </tbody>
 
     </table>
